@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+    <!-- 配置全局属性 -->
+    <settings>
+        <!-- 使用jdbc的getGeneratedKeys获取数据库自增主键值 -->
+        <setting name="useGeneratedKeys" value="true" />
+
+        <!-- 使用列别名替换列名 默认:true -->
+        <setting name="useColumnLabel" value="true" />
+
+        <!-- 开启驼峰命名转换:Table{create_time} -> Entity{createTime} -->
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+
+        <!--defaultExecutorType 配置默认的执行器(executor)。
+            SIMPLE ：简单的执行器。
+            REUSE ：重用prepared statements 的执行器。
+            BATCH：重用statements 并且进行批量-->
+        <!--<setting name="defaultExecutorType" value="SIMPLE"/>-->
+        <!--defaultStatementTimeout 设置查询数据库超时时间。-->
+        <!--<setting name="defaultStatementTimeout" value="25000"/>-->
+
+    </settings>
+
+    <typeAliases>
+        <typeAlias alias="Person" type="com.rba.mybatis.model.Person"/>
+        <!--  如果设置了别名,在mapper下的xml,resultType就直接写别名即可
+        <select resultType="com.rba.mybatis.model.Personon"> 没有别名
+        <select resultType="Person"> 有别名 -->
+    </typeAliases>
+
+
+
+</configuration>

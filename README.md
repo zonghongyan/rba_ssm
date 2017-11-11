@@ -1,2 +1,1 @@
-# rba_ssm
-ssm framework
+## 简易SSM
